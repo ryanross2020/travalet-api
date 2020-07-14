@@ -45,7 +45,7 @@ db.on('open', () => {
 //Middleware
 app.use(cors());
 app.use(express.json());
-app.use('/holidays/', holidayController);
+app.use('/trips/', tripController);
 
 //Login Route
 app.post('/login', async (req, res) => {
@@ -58,7 +58,7 @@ app.post('/login', async (req, res) => {
     }
 });
 
-//LISTENER
+//Listener
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 });
